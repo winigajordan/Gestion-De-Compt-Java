@@ -1,2 +1,6 @@
-package Entity;public class Compte {
+package Entity;
+
+import java.io.Serializable;
+
+public class Compte implements Serializable {
 }
