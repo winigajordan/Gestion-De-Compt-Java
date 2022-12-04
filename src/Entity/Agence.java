@@ -39,7 +39,8 @@ public class Agence implements Serializable {
         this.nomAg = nomAg;
     }
 
+    /*
     public void addClientToAgency(Client client){
         this.listeClients.add(client);
-    }
+    }*/
 }

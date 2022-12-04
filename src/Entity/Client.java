@@ -9,13 +9,14 @@ public class Client implements Serializable {
     private String prenomClient;
     private Agence agence;
     private static int inc=0;
-    //private ArrayList<Compte> listeComptes;
+    private ArrayList<Compte> listeComptes;
 
     public Client(String nomClient, String prenomClient) {
         inc++;
         this.matriculeClient = "CLIENT--"+ String.valueOf(inc);
         this.nomClient = nomClient;
         this.prenomClient = prenomClient;
+        listeComptes = new ArrayList<Compte>();
     }
 
     public String getMatriculeClient() {
@@ -50,12 +51,12 @@ public class Client implements Serializable {
         this.agence = agence;
     }
 
-    /*
+
     public ArrayList<Compte> getListeComptes() {
         return listeComptes;
     }
 
     public void setListeComptes(ArrayList<Compte> listeComptes) {
         this.listeComptes = listeComptes;
-    }*/
+    }
 }
