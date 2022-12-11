@@ -1,12 +1,16 @@
 package Entity;
 
+import Service.Operation;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public abstract class Compte implements Serializable {
     protected String numeroCompte;
     protected String sensCompte; //débiteur ou créditeur
     protected double solde;
     protected Client client;
+    protected ArrayList<Operation> listeOperations;
 
 
 
@@ -14,6 +18,7 @@ public abstract class Compte implements Serializable {
         this.numeroCompte = numeroCompte;
         this.sensCompte = "C";
         this.solde = 0;
+        listeOperations = new ArrayList<Operation>();
     }
 
     public String getNumeroCompte() {
@@ -46,6 +51,14 @@ public abstract class Compte implements Serializable {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public ArrayList<Operation> getListeOperations() {
+        return listeOperations;
+    }
+
+    public void setListeOperations(ArrayList<Operation> listeOperations) {
+        this.listeOperations = listeOperations;
     }
 
     public abstract void afficher();
