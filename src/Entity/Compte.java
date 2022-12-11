@@ -1,7 +1,5 @@
 package Entity;
 
-import Service.Operation;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 

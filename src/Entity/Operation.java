@@ -1,6 +1,5 @@
-package Service;
+package Entity;
 
-import Entity.Compte;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -18,7 +17,7 @@ public class Operation implements Serializable {
         numeroOperation = "OPERATION--"+(++incrementeur);
         this.sensOperation = sensOperation;
         this.montant = montant;
-        DateTimeFormatter fr = DateTimeFormatter.ofPattern("dd-mm-yyyy hh:mm:ss");
+        DateTimeFormatter fr = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss");
         dateOperation = LocalDateTime.now().format(fr);
     }
 
@@ -67,6 +66,6 @@ public class Operation implements Serializable {
     }
 
     public static void setIncrementeur(int incrementeur) {
-        Operation.incrementeur = incrementeur;
+        incrementeur = incrementeur;
     }
 }

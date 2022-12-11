@@ -1,6 +1,8 @@
 package Entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Client implements Serializable {
@@ -59,4 +61,5 @@ public class Client implements Serializable {
     public void setListeComptes(ArrayList<Compte> listeComptes) {
         this.listeComptes = listeComptes;
     }
+
 }

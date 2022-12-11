@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fed0a7bb-2992-41d6-9d85-8a2fb4c9c328" name="Changes" comment="Relation client - Agence effectuée">
-      <change afterPath="$PROJECT_DIR$/src/Service/Operation.java" afterDir="false" />
+    <list default="true" id="fed0a7bb-2992-41d6-9d85-8a2fb4c9c328" name="Changes" comment="Debut des transactions">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Traitement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dao/AccesBd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/AccesBd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CompteCourant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CompteCourant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CompteEpargne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CompteEpargne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Operation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670170747496</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Debut des transactions">
+      <created>1670767645402</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670767645402</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +124,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Relation client - Agence effectuée" />
-    <option name="LAST_COMMIT_MESSAGE" value="Relation client - Agence effectuée" />
+    <MESSAGE value="Debut des transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debut des transactions" />
   </component>
 </project>

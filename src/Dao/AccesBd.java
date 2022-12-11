@@ -9,6 +9,7 @@ public class AccesBd {
     private ArrayList<Client> listeClientDb = new ArrayList<Client>();
     private ArrayList<Agence> listeAgenceDb = new ArrayList<Agence>();
     private ArrayList<Compte> listeCompteDb = new ArrayList<Compte>();
+    private ArrayList<Operation> listeOperationDb = new ArrayList<Operation>();
 
     public Client searchClientByNumber(String matricule)
     {
@@ -149,5 +150,26 @@ public class AccesBd {
                System.out.println("____________________");
            }
         }
+    }
+
+    public Compte searchAccount(String numero){
+        Compte compte = null;
+        for (Compte cpt : listeCompteDb)
+        {
+            if (cpt.getNumeroCompte().equals(numero)){
+                compte = cpt;
+            }
+        }
+        return compte;
+    }
+
+    public void addOperation(Compte compte, Operation operation){
+        operation.setCompte(compte);
+        compte.getListeOperations().add(operation);
+        listeOperationDb.add(operation);
+    }
+
+    public ArrayList<Operation> showOperationByAccount(Compte compte){
+        return compte.getListeOperations();
     }
 }
