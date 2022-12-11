@@ -1,0 +1,11 @@
+1- creer un professeur
+2- Creer un vacataire
+3- Lister les professeurs
+4- Lister les vacataires
+5- lister les enseignants
+6- Creer un module
+7- Lister les modules
+8- Creer un étudiants
+9- Lister tous les etudiants
+10- Lister les cours suivi par un étudiant
+11- Lister les étudiants inscrits à un module
