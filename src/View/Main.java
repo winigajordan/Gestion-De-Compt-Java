@@ -1,24 +1,26 @@
 package View;
 
 import Dao.AccesBd;
-import Entity.Agence;
-import Entity.Client;
-import Entity.CompteCourant;
-import Entity.CompteEpargne;
+import Entity.*;
+import Service.Traitement;
 
 import java.util.Scanner;
 
 public class Main {
 
     private static AccesBd bd = new AccesBd();
+    private static Traitement traitement = new Traitement();
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         int choice = 0;
-        String nomClient, prenomClient, nomAgence, codeAgence, matriculeClient, numeroCompte;
+        String nomClient, prenomClient, nomAgence, codeAgence, matriculeClient, numeroCompte, sensOperation;
         Agence ag = null;
         Client client = null;
+        Compte compte = null;
+        Operation operation = null;
         double tia, agios;
+        int montantOperation;
         do {
             System.out.println("1- Creer une agence");
             System.out.println("2- Lister des agences");
@@ -32,6 +34,8 @@ public class Main {
             System.out.println("10- Lister tous les comptes");
             System.out.println("11- Mise à jour des comptes");
             System.out.println("12- Afficher le(s) comptes d'un client");
+            System.out.println("13- Effectuer une opération");
+            System.out.println("14- Afficher le relever bancaire d'un compte ");
             System.out.println("13- Quitter le programme ");
 
             System.out.print("\n Faites un choix : ");
@@ -127,11 +131,40 @@ public class Main {
                     }
                     break;
                 case 13:
+                    System.out.println("Numéro de compte");
+                    numeroCompte = sc.nextLine();
+                    compte = bd.searchAccount(numeroCompte);
+                    if (compte==null){
+                        System.out.println("Compte innexistant");
+                    }
+                    else {
+                        System.out.println("Montant de l'opération");
+                        montantOperation = sc.nextInt();
+                        sc.nextLine();
+                        System.out.println("Sens de de l'opération [DB ou CR]");
+                        sensOperation = sc.nextLine();
+                        operation = new Operation(sensOperation, montantOperation);
+                        bd.addOperation(compte, operation);
+                    }
+                    break;
+                case 14:
+                    System.out.println("Numéro de compte");
+                    numeroCompte = sc.nextLine();
+                    compte = bd.searchAccount(numeroCompte);
+                    if (compte==null){
+                        System.out.println("Compte innexistant");
+                    }
+                    else {
+                        traitement.getBankStatement(compte);
+                    }
+
+                    break;
+                case 15:
                     break;
                 default:
                     System.out.println("Choix invalide !!!");
             }
-        } while (choice != 13);
+        } while (choice != 15);
         System.out.println("Fin de l'application");
     }
 }
